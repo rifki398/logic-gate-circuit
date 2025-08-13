@@ -6,7 +6,7 @@
       <br/>3D View
     </td>
     <td align="center">
-      <img src="picture/pcb5.png" alt="Result 2" height="270"/>
+      <img src="picture/pcb6.png" alt="Result 2" height="270"/>
       <br/>Board View
     </td>
   </tr>
