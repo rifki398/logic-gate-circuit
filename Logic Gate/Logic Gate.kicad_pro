@@ -243,7 +243,7 @@
   "erc": {
     "erc_exclusions": [
       [
-        "power_pin_not_driven|1574800|698500|2366c0db-bf71-4866-b02d-63bb4c413a31|00000000-0000-0000-0000-000000000000|/0f5288af-f0e6-41f9-bbd1-84429729a3ee|/0f5288af-f0e6-41f9-bbd1-84429729a3ee|",
+        "power_pin_not_driven|1549400|635000|2366c0db-bf71-4866-b02d-63bb4c413a31|00000000-0000-0000-0000-000000000000|/0f5288af-f0e6-41f9-bbd1-84429729a3ee|/0f5288af-f0e6-41f9-bbd1-84429729a3ee|",
         ""
       ]
     ],
@@ -506,7 +506,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "pcb_pdf/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -616,6 +616,14 @@
       "version": 1
     },
     "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "space_save_all_events": true,
