@@ -6,11 +6,11 @@
 	(paper "A4")
 	(title_block
 		(title "Logic Gate")
-		(date "2025-08-21")
+		(date "2025-08-28")
 		(company "Moh Rifqy Risqullah")
 		(comment 1 "Simulated on Proteus 9")
-		(comment 2 "XOR Revised")
-		(comment 3 "Next XNOR")
+		(comment 2 "XOR and XNOR was revised")
+		(comment 3 "2N2222A to BC547")
 	)
 	(lib_symbols
 		(symbol "Connector:Barrel_Jack_MountingPin"
@@ -1168,6 +1168,12 @@
 			(embedded_fonts no)
 		)
 		(symbol "Tactile_Switch_Push_Btn:button_6x6x5"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1196,8 +1202,8 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" ""
-				(at 0 0 0)
+			(property "Datasheet" "https://www.amazon.com/DAOKI-100Pcs-6x6x4-5mm-Momentary-Tactile/dp/B07X8T9D2Q?th=1"
+				(at -0.508 -4.318 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1207,6 +1213,15 @@
 			)
 			(property "Description" "Two pin tactile switch 6x6x5"
 				(at 0 -1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "button, tactile, switch"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1256,7 +1271,7 @@
 				(pin passive inverted
 					(at -5.08 0 0)
 					(length 2.54)
-					(name "2"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1274,7 +1289,7 @@
 				(pin passive inverted
 					(at 5.08 0 180)
 					(length 2.54)
-					(name "1"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1826,80 +1841,8 @@
 		)
 	)
 	(rectangle
-		(start 50.8 27.94)
-		(end 96.52 67.31)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 20eacc86-4818-485d-b1f7-6b7af2d23e28)
-	)
-	(rectangle
-		(start 50.8 130.81)
-		(end 119.38 173.99)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 282a1d3a-44aa-42b7-9472-6a5f0a93f095)
-	)
-	(rectangle
-		(start 176.53 26.67)
-		(end 217.17 52.07)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 4b1e94c5-7e45-4d91-aa93-43c78e928446)
-	)
-	(rectangle
-		(start 176.53 78.74)
-		(end 267.97 121.92)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 5a79f393-8b48-4b50-ada9-3b1ec8d4c198)
-	)
-	(rectangle
-		(start 50.8 78.74)
-		(end 97.79 118.11)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 694eebbd-f09f-4703-931f-1d1df4ad039a)
-	)
-	(rectangle
-		(start 111.76 27.94)
-		(end 167.64 67.31)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 6d86a367-4893-46b9-8ebb-8351a2759ba2)
-	)
-	(rectangle
 		(start 132.08 130.81)
-		(end 186.69 157.48)
+		(end 190.5 161.29)
 		(stroke
 			(width 0)
 			(type default)
@@ -1911,7 +1854,7 @@
 	)
 	(rectangle
 		(start 195.58 130.81)
-		(end 231.14 149.86)
+		(end 232.41 153.67)
 		(stroke
 			(width 0)
 			(type default)
@@ -1920,18 +1863,6 @@
 			(type none)
 		)
 		(uuid ac54d148-5f2d-4bbe-8057-a803d3ef0668)
-	)
-	(rectangle
-		(start 111.76 78.74)
-		(end 167.64 118.11)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid c06dbe84-3fbe-4e8c-97f9-316006dc4db2)
 	)
 	(text "NOT GATE\n"
 		(exclude_from_sim no)
@@ -2042,7 +1973,7 @@
 		(uuid "fc254a2d-4a79-420b-a6a5-c86814f09910")
 	)
 	(junction
-		(at 156.21 149.86)
+		(at 157.48 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "00cda103-774b-40bc-9e26-4db62e3df43f")
@@ -2114,7 +2045,7 @@
 		(uuid "595eea05-53cb-4468-9720-66d9b4bef92c")
 	)
 	(junction
-		(at 180.34 140.97)
+		(at 181.61 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "64d3f7e5-2415-4254-bddc-6403e541dc26")
@@ -2180,7 +2111,7 @@
 		(uuid "a6ac902c-3625-4baa-8513-92753061253d")
 	)
 	(junction
-		(at 149.86 149.86)
+		(at 151.13 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ace24c60-7201-47d3-b5f4-77edb101bc82")
@@ -2198,7 +2129,7 @@
 		(uuid "b43bb78d-18fd-46b4-ad06-d7b3ac82f0fa")
 	)
 	(junction
-		(at 156.21 140.97)
+		(at 157.48 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bff2d93d-605e-4c11-87af-024d5d9a0d8b")
@@ -2222,7 +2153,7 @@
 		(uuid "cd57d79f-8ff2-4dec-b87d-f839f6c1f09f")
 	)
 	(junction
-		(at 167.64 149.86)
+		(at 168.91 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d9c1fb2c-a7be-4bcc-8d0b-69a2f9abd924")
@@ -2264,7 +2195,7 @@
 		(uuid "ff150794-1afe-4a9a-b7fe-4e6d35bfb768")
 	)
 	(no_connect
-		(at 139.7 151.13)
+		(at 140.97 153.67)
 		(uuid "add9a1bf-8c0c-4615-8e68-68a213019f26")
 	)
 	(wire
@@ -2339,7 +2270,7 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 140.97) (xy 217.17 140.97)
+			(xy 209.55 143.51) (xy 217.17 143.51)
 		)
 		(stroke
 			(width 0)
@@ -2469,7 +2400,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 140.97) (xy 217.17 143.51)
+			(xy 217.17 143.51) (xy 217.17 146.05)
 		)
 		(stroke
 			(width 0)
@@ -2529,7 +2460,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 140.97) (xy 156.21 140.97)
+			(xy 148.59 143.51) (xy 157.48 143.51)
 		)
 		(stroke
 			(width 0)
@@ -2569,7 +2500,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 146.05) (xy 149.86 146.05)
+			(xy 148.59 148.59) (xy 151.13 148.59)
 		)
 		(stroke
 			(width 0)
@@ -2579,7 +2510,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 147.32) (xy 156.21 149.86)
+			(xy 157.48 149.86) (xy 157.48 152.4)
 		)
 		(stroke
 			(width 0)
@@ -2629,7 +2560,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 148.59) (xy 167.64 149.86)
+			(xy 168.91 151.13) (xy 168.91 152.4)
 		)
 		(stroke
 			(width 0)
@@ -2679,7 +2610,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 147.32) (xy 180.34 149.86)
+			(xy 181.61 149.86) (xy 181.61 152.4)
 		)
 		(stroke
 			(width 0)
@@ -2729,7 +2660,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 138.43) (xy 227.33 138.43)
+			(xy 222.25 140.97) (xy 227.33 140.97)
 		)
 		(stroke
 			(width 0)
@@ -2859,7 +2790,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 149.86) (xy 149.86 151.13)
+			(xy 151.13 152.4) (xy 151.13 153.67)
 		)
 		(stroke
 			(width 0)
@@ -2969,7 +2900,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 139.7) (xy 156.21 140.97)
+			(xy 157.48 142.24) (xy 157.48 143.51)
 		)
 		(stroke
 			(width 0)
@@ -3129,7 +3060,7 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 138.43) (xy 214.63 138.43)
+			(xy 209.55 140.97) (xy 214.63 140.97)
 		)
 		(stroke
 			(width 0)
@@ -3189,7 +3120,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 140.97) (xy 180.34 142.24)
+			(xy 181.61 143.51) (xy 181.61 144.78)
 		)
 		(stroke
 			(width 0)
@@ -3209,7 +3140,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 146.05) (xy 149.86 149.86)
+			(xy 151.13 148.59) (xy 151.13 152.4)
 		)
 		(stroke
 			(width 0)
@@ -3249,7 +3180,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 140.97) (xy 180.34 140.97)
+			(xy 176.53 143.51) (xy 181.61 143.51)
 		)
 		(stroke
 			(width 0)
@@ -3329,7 +3260,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 140.97) (xy 156.21 142.24)
+			(xy 157.48 143.51) (xy 157.48 144.78)
 		)
 		(stroke
 			(width 0)
@@ -3389,7 +3320,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 140.97) (xy 160.02 140.97)
+			(xy 157.48 143.51) (xy 161.29 143.51)
 		)
 		(stroke
 			(width 0)
@@ -3439,7 +3370,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 137.16) (xy 184.15 140.97)
+			(xy 185.42 139.7) (xy 185.42 143.51)
 		)
 		(stroke
 			(width 0)
@@ -3619,7 +3550,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 138.43) (xy 227.33 137.16)
+			(xy 227.33 140.97) (xy 227.33 139.7)
 		)
 		(stroke
 			(width 0)
@@ -3649,7 +3580,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 149.86) (xy 167.64 149.86)
+			(xy 181.61 152.4) (xy 168.91 152.4)
 		)
 		(stroke
 			(width 0)
@@ -3789,7 +3720,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 149.86) (xy 167.64 149.86)
+			(xy 157.48 152.4) (xy 168.91 152.4)
 		)
 		(stroke
 			(width 0)
@@ -3819,7 +3750,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 149.86) (xy 156.21 149.86)
+			(xy 151.13 152.4) (xy 157.48 152.4)
 		)
 		(stroke
 			(width 0)
@@ -3869,7 +3800,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 140.97) (xy 180.34 140.97)
+			(xy 185.42 143.51) (xy 181.61 143.51)
 		)
 		(stroke
 			(width 0)
@@ -4188,7 +4119,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 205.74 44.45 0)
 			(effects
 				(font
@@ -4490,7 +4421,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.amazon.com/DAOKI-100Pcs-6x6x4-5mm-Momentary-Tactile/dp/B07X8T9D2Q?th=1"
 			(at 121.92 107.95 0)
 			(effects
 				(font
@@ -4660,7 +4591,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Barrel_Jack_MountingPin")
-		(at 139.7 143.51 0)
+		(at 140.97 146.05 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4668,7 +4599,7 @@
 		(dnp no)
 		(uuid "1842075d-a2b5-4b4a-acc2-804c49cba80c")
 		(property "Reference" "J1"
-			(at 135.636 137.668 0)
+			(at 136.906 140.208 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4676,7 +4607,7 @@
 			)
 		)
 		(property "Value" "Barrel_Jack_MountingPin"
-			(at 159.004 143.764 0)
+			(at 160.274 146.304 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4685,7 +4616,7 @@
 			)
 		)
 		(property "Footprint" "Connector_BarrelJack:BarrelJack_Horizontal"
-			(at 140.97 144.526 0)
+			(at 142.24 147.066 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4694,7 +4625,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 140.97 144.526 0)
+			(at 142.24 147.066 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4703,7 +4634,7 @@
 			)
 		)
 		(property "Description" "DC Barrel Jack with a mounting pin"
-			(at 139.7 143.51 0)
+			(at 140.97 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4883,7 +4814,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 156.21 139.7 0)
+		(at 157.48 142.24 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4892,7 +4823,7 @@
 		(fields_autoplaced yes)
 		(uuid "1d861134-ec94-40c6-898a-bdbfe7b963cc")
 		(property "Reference" "#FLG01"
-			(at 156.21 137.795 0)
+			(at 157.48 140.335 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4901,7 +4832,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 156.21 134.62 0)
+			(at 157.48 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4910,7 +4841,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 156.21 139.7 0)
+			(at 157.48 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4919,7 +4850,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 156.21 139.7 0)
+			(at 157.48 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4928,7 +4859,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 156.21 139.7 0)
+			(at 157.48 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4966,7 +4897,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 210.82 110.4901 0)
 			(effects
 				(font
@@ -5041,7 +4972,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 86.36 55.8801 0)
 			(effects
 				(font
@@ -5264,7 +5195,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.amazon.com/DAOKI-100Pcs-6x6x4-5mm-Momentary-Tactile/dp/B07X8T9D2Q?th=1"
 			(at 60.96 96.52 0)
 			(effects
 				(font
@@ -5380,7 +5311,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 84.582 150.622 0)
 			(effects
 				(font
@@ -5455,7 +5386,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 210.312 98.552 0)
 			(effects
 				(font
@@ -5595,7 +5526,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 145.542 98.552 0)
 			(effects
 				(font
@@ -5818,7 +5749,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.amazon.com/DAOKI-100Pcs-6x6x4-5mm-Momentary-Tactile/dp/B07X8T9D2Q?th=1"
 			(at 186.69 96.52 0)
 			(effects
 				(font
@@ -5936,7 +5867,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 157.48 55.8801 0)
 			(effects
 				(font
@@ -6170,7 +6101,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.amazon.com/DAOKI-100Pcs-6x6x4-5mm-Momentary-Tactile/dp/B07X8T9D2Q?th=1"
 			(at 121.92 96.52 0)
 			(effects
 				(font
@@ -6222,7 +6153,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 86.36 97.7899 0)
 			(effects
 				(font
@@ -6373,7 +6304,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 258.572 112.522 0)
 			(effects
 				(font
@@ -6464,7 +6395,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.amazon.com/DAOKI-100Pcs-6x6x4-5mm-Momentary-Tactile/dp/B07X8T9D2Q?th=1"
 			(at 184.15 41.91 0)
 			(effects
 				(font
@@ -6698,7 +6629,7 @@
 	)
 	(symbol
 		(lib_id "Diode:1N4001")
-		(at 218.44 138.43 0)
+		(at 218.44 140.97 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6707,14 +6638,6 @@
 		(dnp no)
 		(uuid "48f9a5bb-7de0-42f0-97fe-aa9a7494ff50")
 		(property "Reference" "D8"
-			(at 218.44 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4001"
 			(at 218.44 134.62 0)
 			(effects
 				(font
@@ -6722,8 +6645,16 @@
 				)
 			)
 		)
+		(property "Value" "1N4001"
+			(at 218.44 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 218.44 138.43 0)
+			(at 218.44 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6732,7 +6663,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 218.44 138.43 0)
+			(at 218.44 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6741,7 +6672,7 @@
 			)
 		)
 		(property "Description" "50V 1A General Purpose Rectifier Diode, DO-41"
-			(at 218.44 138.43 0)
+			(at 218.44 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6750,7 +6681,7 @@
 			)
 		)
 		(property "Sim.Device" "D"
-			(at 218.44 138.43 0)
+			(at 218.44 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6759,7 +6690,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 218.44 138.43 0)
+			(at 218.44 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6816,7 +6747,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.amazon.com/DAOKI-100Pcs-6x6x4-5mm-Momentary-Tactile/dp/B07X8T9D2Q?th=1"
 			(at 60.96 148.59 0)
 			(effects
 				(font
@@ -7142,7 +7073,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 85.09 162.5601 0)
 			(effects
 				(font
@@ -7298,7 +7229,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.amazon.com/DAOKI-100Pcs-6x6x4-5mm-Momentary-Tactile/dp/B07X8T9D2Q?th=1"
 			(at 60.96 57.15 0)
 			(effects
 				(font
@@ -7333,7 +7264,7 @@
 	)
 	(symbol
 		(lib_id "Regulator_Linear:L7805")
-		(at 167.64 140.97 0)
+		(at 168.91 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7342,7 +7273,7 @@
 		(fields_autoplaced yes)
 		(uuid "639efb0c-5f0b-4adb-97e7-79264121b693")
 		(property "Reference" "U1"
-			(at 167.64 134.62 0)
+			(at 168.91 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7350,7 +7281,7 @@
 			)
 		)
 		(property "Value" "L7805"
-			(at 167.64 137.16 0)
+			(at 168.91 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7358,7 +7289,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
-			(at 168.275 144.78 0)
+			(at 169.545 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7369,7 +7300,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf"
-			(at 167.64 142.24 0)
+			(at 168.91 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7378,7 +7309,7 @@
 			)
 		)
 		(property "Description" "Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252"
-			(at 167.64 140.97 0)
+			(at 168.91 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7698,7 +7629,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 145.542 47.752 0)
 			(effects
 				(font
@@ -7789,7 +7720,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.amazon.com/DAOKI-100Pcs-6x6x4-5mm-Momentary-Tactile/dp/B07X8T9D2Q?th=1"
 			(at 60.96 163.83 0)
 			(effects
 				(font
@@ -7856,7 +7787,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.amazon.com/DAOKI-100Pcs-6x6x4-5mm-Momentary-Tactile/dp/B07X8T9D2Q?th=1"
 			(at 121.92 45.72 0)
 			(effects
 				(font
@@ -8157,7 +8088,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small_US")
-		(at 180.34 144.78 0)
+		(at 181.61 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8165,7 +8096,7 @@
 		(dnp no)
 		(uuid "7ad6cbdb-d379-4e15-a8f8-3c3c2525b143")
 		(property "Reference" "C2"
-			(at 176.022 143.002 0)
+			(at 177.292 145.542 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8174,7 +8105,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 175.006 145.034 0)
+			(at 176.276 147.574 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8183,7 +8114,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Radial_D5.0mm_H11.0mm_P2.00mm"
-			(at 180.34 144.78 0)
+			(at 181.61 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8192,7 +8123,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 180.34 144.78 0)
+			(at 181.61 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8201,7 +8132,7 @@
 			)
 		)
 		(property "Description" "capacitor, small US symbol"
-			(at 180.34 144.78 0)
+			(at 181.61 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8362,7 +8293,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 184.15 137.16 0)
+		(at 185.42 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8371,7 +8302,7 @@
 		(fields_autoplaced yes)
 		(uuid "82514b58-503f-4765-84ea-69a557c9f58c")
 		(property "Reference" "#PWR023"
-			(at 184.15 140.97 0)
+			(at 185.42 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8380,7 +8311,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 184.15 132.08 0)
+			(at 185.42 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8388,7 +8319,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 184.15 137.16 0)
+			(at 185.42 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8397,7 +8328,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 184.15 137.16 0)
+			(at 185.42 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8406,7 +8337,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 184.15 137.16 0)
+			(at 185.42 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8493,7 +8424,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 217.17 143.51 0)
+		(at 217.17 146.05 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8502,7 +8433,7 @@
 		(fields_autoplaced yes)
 		(uuid "8ca204d9-1651-4526-8188-0e8ae5dc1744")
 		(property "Reference" "#PWR025"
-			(at 217.17 149.86 0)
+			(at 217.17 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8511,7 +8442,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 217.17 148.59 0)
+			(at 217.17 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8519,7 +8450,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 217.17 143.51 0)
+			(at 217.17 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8528,7 +8459,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 217.17 143.51 0)
+			(at 217.17 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8537,7 +8468,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 217.17 143.51 0)
+			(at 217.17 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8656,7 +8587,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.amazon.com/DAOKI-100Pcs-6x6x4-5mm-Momentary-Tactile/dp/B07X8T9D2Q?th=1"
 			(at 60.96 45.72 0)
 			(effects
 				(font
@@ -8788,7 +8719,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.amazon.com/DAOKI-100Pcs-6x6x4-5mm-Momentary-Tactile/dp/B07X8T9D2Q?th=1"
 			(at 186.69 111.76 0)
 			(effects
 				(font
@@ -9052,7 +8983,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.amazon.com/DAOKI-100Pcs-6x6x4-5mm-Momentary-Tactile/dp/B07X8T9D2Q?th=1"
 			(at 60.96 107.95 0)
 			(effects
 				(font
@@ -9104,7 +9035,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 86.36 46.9899 0)
 			(effects
 				(font
@@ -9247,7 +9178,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 157.48 106.6801 0)
 			(effects
 				(font
@@ -9306,7 +9237,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Socket")
-		(at 204.47 138.43 0)
+		(at 204.47 140.97 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9315,7 +9246,7 @@
 		(dnp no)
 		(uuid "b523ed75-c6b1-4b87-ad98-70edf39eee9e")
 		(property "Reference" "J2"
-			(at 203.2 138.4299 0)
+			(at 203.2 140.9699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9324,7 +9255,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02_Socket"
-			(at 215.646 143.256 0)
+			(at 215.646 145.796 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9333,7 +9264,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
-			(at 204.47 138.43 0)
+			(at 204.47 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9342,7 +9273,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 204.47 138.43 0)
+			(at 204.47 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9351,7 +9282,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 204.47 138.43 0)
+			(at 204.47 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9376,7 +9307,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small_US")
-		(at 156.21 144.78 0)
+		(at 157.48 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9384,7 +9315,7 @@
 		(dnp no)
 		(uuid "ba682abc-9a97-4841-a755-cb8416291a23")
 		(property "Reference" "C1"
-			(at 151.892 143.002 0)
+			(at 153.162 145.542 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9393,7 +9324,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 150.876 145.034 0)
+			(at 152.146 147.574 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9402,7 +9333,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Radial_D5.0mm_H11.0mm_P2.00mm"
-			(at 156.21 144.78 0)
+			(at 157.48 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9411,7 +9342,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 156.21 144.78 0)
+			(at 157.48 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9420,7 +9351,7 @@
 			)
 		)
 		(property "Description" "capacitor, small US symbol"
-			(at 156.21 144.78 0)
+			(at 157.48 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9526,7 +9457,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 231.902 92.202 0)
 			(effects
 				(font
@@ -9601,7 +9532,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 106.172 144.272 0)
 			(effects
 				(font
@@ -9727,7 +9658,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 149.86 151.13 0)
+		(at 151.13 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9736,7 +9667,7 @@
 		(fields_autoplaced yes)
 		(uuid "cbe9b727-3112-410e-9702-0f4e0f899c07")
 		(property "Reference" "#PWR022"
-			(at 149.86 157.48 0)
+			(at 151.13 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9745,7 +9676,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 149.86 156.21 0)
+			(at 151.13 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9753,7 +9684,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 149.86 151.13 0)
+			(at 151.13 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9762,7 +9693,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 149.86 151.13 0)
+			(at 151.13 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9771,7 +9702,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 149.86 151.13 0)
+			(at 151.13 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9874,7 +9805,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 231.902 107.442 0)
 			(effects
 				(font
@@ -10081,7 +10012,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 86.36 106.6801 0)
 			(effects
 				(font
@@ -10207,7 +10138,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 227.33 137.16 0)
+		(at 227.33 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10216,7 +10147,7 @@
 		(fields_autoplaced yes)
 		(uuid "eb945d5b-0ec7-4800-b68a-d6e8bf701c7b")
 		(property "Reference" "#PWR015"
-			(at 227.33 140.97 0)
+			(at 227.33 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10225,7 +10156,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 227.33 132.08 0)
+			(at 227.33 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10233,7 +10164,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 227.33 137.16 0)
+			(at 227.33 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10242,7 +10173,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 227.33 137.16 0)
+			(at 227.33 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10251,7 +10182,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 227.33 137.16 0)
+			(at 227.33 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10305,7 +10236,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.amazon.com/DAOKI-100Pcs-6x6x4-5mm-Momentary-Tactile/dp/B07X8T9D2Q?th=1"
 			(at 121.92 57.15 0)
 			(effects
 				(font
@@ -10423,7 +10354,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PN2222A"
+		(property "Value" "BC547"
 			(at 105.41 154.94 0)
 			(effects
 				(font
